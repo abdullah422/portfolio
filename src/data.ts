@@ -65,6 +65,7 @@ export type Project = {
   shots: string[]
   /** shots are store screenshots with their own device frame */
   poster?: boolean
+  logo?: string
 }
 
 export const projects: Project[] = [
@@ -105,8 +106,9 @@ export const projects: Project[] = [
       { en: 'Qibla compass, prayer times and stories feed, fully Arabic/RTL', ar: 'بوصلة القبلة ومواقيت الصلاة وقصص، بواجهة عربية RTL' },
     ],
     stack: ['Flutter', 'Firebase', 'Live Location', 'FCM', 'Codemagic'],
-    shots: ['/projects/moneeb/1.webp', '/projects/moneeb/2.webp', '/projects/moneeb/3.webp', '/projects/moneeb/4.webp', '/projects/moneeb/5.webp'],
+    shots: ['/projects/moneeb/1.webp', '/projects/moneeb/2.webp', '/projects/moneeb/3.webp', '/projects/moneeb/4.webp', '/projects/moneeb/5.webp', '/projects/moneeb/6.webp'],
     poster: true,
+    logo: '/projects/moneeb/logo.webp',
   },
   {
     id: 'marsaai',

@@ -129,7 +129,7 @@ function ProjectCard({ p, lang, onOpen, i }: { p: Project; lang: Lang; onOpen: (
         <div className="relative flex items-start justify-between">
           <div>
             <span className="text-xs tracking-widest uppercase" style={{ color: 'var(--muted)' }}>{p.year} · {tr(ui.cats[p.cat], lang)}</span>
-            <h3 className="font-display mt-1 text-2xl font-bold">{tr(p.name, lang)}</h3>
+            <div className="mt-1 flex items-center gap-3">{p.logo && <img src={p.logo} alt="" className="h-10 w-10 rounded-xl" />}<h3 className="font-display text-2xl font-bold">{tr(p.name, lang)}</h3></div>
           </div>
           <span className="grid h-10 w-10 place-items-center rounded-full glass transition-transform group-hover:rotate-45"><ArrowUpRight size={18} /></span>
         </div>
@@ -184,7 +184,7 @@ function Modal({ p, lang, onClose }: { p: Project; lang: Lang; onClose: () => vo
         </div>
         <div className="p-8">
           <span className="text-xs tracking-widest uppercase" style={{ color: 'var(--muted)' }}>{p.year}</span>
-          <h3 className="font-display text-4xl font-bold mt-1">{tr(p.name, lang)}</h3>
+          <div className="mt-1 flex items-center gap-4">{p.logo && <img src={p.logo} alt="" className="h-14 w-14 rounded-2xl" />}<h3 className="font-display text-4xl font-bold">{tr(p.name, lang)}</h3></div>
           <p className="mt-4 leading-relaxed" style={{ color: 'var(--muted)' }}>{tr(p.blurb, lang)}</p>
           <h4 className="font-display mt-6 mb-3 font-bold">{tr(ui.features, lang)}</h4>
           <ul className="space-y-2.5">
