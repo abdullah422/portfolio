@@ -186,7 +186,9 @@ export const projects: Project[] = [
       { en: 'Order tracking, push notifications, dark mode, AR/EN', ar: 'تتبع الطلبات، إشعارات، دارك مود، عربي/إنجليزي' },
     ],
     stack: ['Flutter', 'Google Maps', 'Firebase', 'Provider'],
-    shots: ['/projects/tamam/1.jpg', '/projects/tamam/2.jpg', '/projects/tamam/3.jpg'],
+    shots: [1, 2, 3, 4, 5].map((n) => `/projects/tamam/${n}.webp`),
+    poster: true,
+    logo: '/projects/tamam/logo.webp',
   },
   {
     id: 'salon',
@@ -203,7 +205,9 @@ export const projects: Project[] = [
       { en: 'Interactive Google Map with ratings', ar: 'خريطة تفاعلية بالتقييمات' },
     ],
     stack: ['Flutter', 'Pusher', 'Google Maps', 'Firebase'],
-    shots: [],
+    shots: [1, 2, 3, 4, 5, 6, 7, 8].map((n) => `/projects/salon/${n}.webp`),
+    poster: true,
+    logo: '/projects/salon/logo.webp',
   },
   {
     id: 'egypt',
