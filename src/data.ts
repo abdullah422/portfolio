@@ -216,15 +216,18 @@ export const projects: Project[] = [
     year: '2024',
     hue: ['#f97316', '#eab308'],
     blurb: {
-      en: 'B2B2C e-commerce system: customer, vendor and delivery apps synced through custom APIs.',
-      ar: 'نظام تجارة إلكترونية B2B2C: تطبيق عميل وتاجر وتوصيل مرتبطين بـ APIs مخصصة.',
+      en: "Egypt's fabric marketplace: browse trusted stores, buy by the meter, request quotations and track shipping. Part of a three-app B2B2C system.",
+      ar: 'سوق الأقمشة في مصر: تصفح متاجر موثوقة، اشترِ بالمتر، اطلب عروض أسعار وتتبّع الشحن. جزء من نظام B2B2C من ثلاث تطبيقات.',
     },
     features: [
-      { en: 'Built the customer app end-to-end (cart, checkout, tracking)', ar: 'بنيت تطبيق العميل كامل (سلة، دفع، تتبع)' },
-      { en: 'Designed APIs syncing all three apps', ar: 'صممت APIs تربط التطبيقات التلاتة' },
+      { en: 'Built the customer app end-to-end: catalog, cart, checkout, order tracking', ar: 'بنيت تطبيق العميل كامل: كتالوج، سلة، دفع، تتبع الطلبات' },
+      { en: 'Quotation requests and direct chat with stores', ar: 'طلبات عروض أسعار ومحادثة مباشرة مع المتاجر' },
+      { en: 'Designed APIs syncing customer, vendor and delivery apps', ar: 'صممت APIs تربط تطبيقات العميل والتاجر والتوصيل' },
     ],
     stack: ['Flutter', 'Laravel', 'REST', 'Firebase'],
-    shots: [],
+    shots: [1, 2, 3, 4, 5, 6, 7, 8].map((n) => `/projects/egypt/${n}.webp`),
+    poster: true,
+    logo: '/projects/egypt/logo.webp',
   },
 ]
 
