@@ -5,8 +5,8 @@ export type T = { en: string; ar: string }
 export const LINKS = {
   email: 'abdullahmouawad.dev@gmail.com',
   phone: '+201151997479',
-  github: '',
-  linkedin: '',
+  github: 'https://github.com/abdullah422',
+  linkedin: 'https://www.linkedin.com/in/abdullah-mouawad/',
 }
 
 export const ui = {
