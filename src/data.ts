@@ -72,8 +72,8 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: 'maly',
-    name: { en: 'Maly POS', ar: 'مالي POS' },
+    id: 'fox',
+    name: { en: 'Fox POS', ar: 'فوكس POS' },
     cat: 'pos',
     year: '2026',
     hue: ['#22d3ee', '#6366f1'],
