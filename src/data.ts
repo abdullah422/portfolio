@@ -127,7 +127,9 @@ export const projects: Project[] = [
       { en: 'FCM push for order & table alerts', ar: 'إشعارات FCM لحالة الطلب والطاولة' },
     ],
     stack: ['Flutter', 'Firebase', 'FCM', 'REST', 'Provider'],
-    shots: ['/projects/marsaai/1.jpg', '/projects/marsaai/2.jpg', '/projects/marsaai/3.jpg'],
+    shots: [1, 2, 3, 4, 5].map((n) => `/projects/marsaai/${n}.webp`),
+    poster: true,
+    logo: '/projects/marsaai/logo.webp',
   },
   {
     id: 'shure',
