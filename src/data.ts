@@ -87,6 +87,7 @@ export const projects: Project[] = [
     ],
     stack: ['Flutter', 'Dart', 'REST', 'SQLite', 'ZATCA', 'NearPay'],
     shots: ['/projects/maly/1.webp', '/projects/maly/2.webp', '/projects/maly/4.webp', '/projects/maly/3.webp'],
+    logo: '/projects/maly/logo.webp',
   },
   {
     id: 'moneeb',
