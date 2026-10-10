@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@custom-variant light (&:where([data-theme="light"], [data-theme="light"] *));
+
+:root {
+  --bg: #07080d; --bg2: #0d0f17; --card: rgba(255,255,255,.04); --line: rgba(255,255,255,.09);
+  --fg: #eef0f7; --muted: #8a90a5; --a: #5eead4; --b: #8b5cf6; --c: #38bdf8;
+}
+[data-theme="light"] {
+  --bg: #f6f7fb; --bg2: #ffffff; --card: rgba(15,18,40,.04); --line: rgba(15,18,40,.1);
+  --fg: #11142a; --muted: #5d637a; --a: #0d9488; --b: #7c3aed; --c: #0284c7;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: 'Inter','Cairo',sans-serif; transition: background .4s, color .4s; overflow-x: hidden; }
+[dir="rtl"] body, [dir="rtl"] .font-display { font-family: 'Cairo', sans-serif; }
+.font-display { font-family: 'Space Grotesk','Cairo',sans-serif; }
+.grad { background: linear-gradient(110deg, var(--a), var(--c) 45%, var(--b)); -webkit-background-clip: text; background-clip: text; color: transparent; background-size: 200% auto; animation: sh 6s linear infinite; }
+@keyframes sh { to { background-position: 200% center; } }
+.glass { background: var(--card); border: 1px solid var(--line); backdrop-filter: blur(14px); }
+.noise::before { content:""; position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: .5;
+  background: radial-gradient(60rem 40rem at 10% -10%, color-mix(in srgb, var(--b) 22%, transparent), transparent 60%),
+              radial-gradient(50rem 40rem at 100% 10%, color-mix(in srgb, var(--a) 18%, transparent), transparent 60%); }
+.grid-bg { background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 56px 56px; mask-image: radial-gradient(ellipse at 50% 30%, #000 20%, transparent 70%); }
+.marquee { animation: mq 32s linear infinite; }
+[dir="rtl"] .marquee { animation-direction: reverse; }
+@keyframes mq { to { transform: translateX(-50%); } }
+.float { animation: fl 6s ease-in-out infinite; }
+@keyframes fl { 50% { transform: translateY(-14px); } }
+::selection { background: var(--b); color: #fff; }
+::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-thumb { background: var(--line); border-radius: 8px; }
+@media (prefers-reduced-motion: reduce) { *, .marquee, .float, .grad { animation: none !important; } html { scroll-behavior: auto; } }
