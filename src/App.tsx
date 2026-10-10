@@ -278,7 +278,7 @@ export default function App() {
           </div>
           <div className="relative hidden lg:block">
             {[0, 1, 2].map((i) => {
-              const p = [projects[2], projects[4], projects[0]][i]
+              const p = ['marsaai', 'shure-doctor', 'maly'].map((id) => projects.find((x) => x.id === id)!)[i]
               return (
                 <motion.div key={i} initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 + i * 0.15, duration: 0.8 }}
                   className={`${i === 1 ? 'relative z-10' : 'absolute top-10'} ${i === 0 ? '-start-4 -rotate-6 scale-90' : ''} ${i === 2 ? '-end-4 rotate-6 scale-90' : ''} ${i === 1 ? 'float mx-auto' : ''}`}>
