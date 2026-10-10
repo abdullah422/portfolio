@@ -51,6 +51,7 @@ export const ui = {
   close: { en: 'Close', ar: 'إغلاق' },
   features: { en: 'Highlights', ar: 'أهم المميزات' },
   stack: { en: 'Tech stack', ar: 'التقنيات' },
+  getIt: { en: 'Get the app', ar: 'حمّل التطبيق' },
 }
 
 export type Project = {
@@ -66,6 +67,7 @@ export type Project = {
   /** shots are store screenshots with their own device frame */
   poster?: boolean
   logo?: string
+  links?: { play?: string; apple?: string }
 }
 
 export const projects: Project[] = [
@@ -88,6 +90,7 @@ export const projects: Project[] = [
     stack: ['Flutter', 'Dart', 'REST', 'SQLite', 'ZATCA', 'NearPay'],
     shots: ['/projects/maly/1.webp', '/projects/maly/2.webp', '/projects/maly/4.webp', '/projects/maly/3.webp'],
     logo: '/projects/maly/logo.webp',
+    links: { play: 'https://play.google.com/store/apps/details?id=net.engazat.foxpos' },
   },
   {
     id: 'moneeb',
@@ -110,6 +113,7 @@ export const projects: Project[] = [
     shots: ['/projects/moneeb/1.webp', '/projects/moneeb/2.webp', '/projects/moneeb/3.webp', '/projects/moneeb/4.webp', '/projects/moneeb/5.webp', '/projects/moneeb/6.webp'],
     poster: true,
     logo: '/projects/moneeb/logo.webp',
+    links: { play: 'https://play.google.com/store/apps/details?id=com.moneeb.sa', apple: 'https://apps.apple.com/app/id6800002514' },
   },
   {
     id: 'marsaai',
@@ -130,6 +134,7 @@ export const projects: Project[] = [
     shots: [1, 2, 3, 4, 5].map((n) => `/projects/marsaai/${n}.webp`),
     poster: true,
     logo: '/projects/marsaai/logo.webp',
+    links: { play: 'https://play.google.com/store/apps/details?id=com.marsaai.app.ha', apple: 'https://apps.apple.com/app/id6747322346' },
   },
   {
     id: 'shure-patient',
@@ -150,6 +155,7 @@ export const projects: Project[] = [
     shots: [1, 2, 3, 4, 5, 6, 7, 8].map((n) => `/projects/shure/p${n}.webp`),
     poster: true,
     logo: '/projects/shure/logo-patient.webp',
+    links: { play: 'https://play.google.com/store/apps/details?id=com.shure_patient.name' },
   },
   {
     id: 'shure-doctor',
@@ -170,6 +176,7 @@ export const projects: Project[] = [
     shots: [1, 2, 3, 4, 5, 6].map((n) => `/projects/shure/d${n}.webp`),
     poster: true,
     logo: '/projects/shure/logo.webp',
+    links: { play: 'https://play.google.com/store/apps/details?id=com.shure_doctor.name' },
   },
   {
     id: 'tamam',
@@ -189,6 +196,7 @@ export const projects: Project[] = [
     shots: [1, 2, 3, 4, 5].map((n) => `/projects/tamam/${n}.webp`),
     poster: true,
     logo: '/projects/tamam/logo.webp',
+    links: { play: 'https://play.google.com/store/apps/details?id=com.tamam.app', apple: 'https://apps.apple.com/app/id6757296131' },
   },
   {
     id: 'salon',
@@ -208,6 +216,7 @@ export const projects: Project[] = [
     shots: [1, 2, 3, 4, 5, 6, 7, 8].map((n) => `/projects/salon/${n}.webp`),
     poster: true,
     logo: '/projects/salon/logo.webp',
+    links: { play: 'https://play.google.com/store/apps/details?id=com.ma.code.master.salon.my_projects' },
   },
   {
     id: 'egypt',
@@ -228,6 +237,7 @@ export const projects: Project[] = [
     shots: [1, 2, 3, 4, 5, 6, 7, 8].map((n) => `/projects/egypt/${n}.webp`),
     poster: true,
     logo: '/projects/egypt/logo.webp',
+    links: { play: 'https://play.google.com/store/apps/details?id=com.egyptstores.user', apple: 'https://apps.apple.com/app/id6787989424' },
   },
 ]
 

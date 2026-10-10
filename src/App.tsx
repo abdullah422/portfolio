@@ -194,6 +194,12 @@ function Modal({ p, lang, onClose }: { p: Project; lang: Lang; onClose: () => vo
           </ul>
           <h4 className="font-display mt-6 mb-3 font-bold">{tr(ui.stack, lang)}</h4>
           <div className="flex flex-wrap gap-2">{p.stack.map((s) => <span key={s} className="rounded-full px-3 py-1 text-xs glass">{s}</span>)}</div>
+          {p.links && (
+            <div className="mt-6 flex flex-wrap gap-3">
+              {p.links.play && <a href={p.links.play} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-white transition-transform hover:scale-105" style={{ background: `linear-gradient(110deg, ${p.hue[0]}, ${p.hue[1]})` }}>Google Play <ArrowUpRight size={16} /></a>}
+              {p.links.apple && <a href={p.links.apple} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold glass transition-transform hover:scale-105">App Store <ArrowUpRight size={16} /></a>}
+            </div>
+          )}
         </div>
       </motion.div>
     </motion.div>
