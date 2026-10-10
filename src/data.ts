@@ -149,6 +149,7 @@ export const projects: Project[] = [
     stack: ['Flutter', 'Video/Voice', 'FCM', 'Edfapay', 'Codemagic'],
     shots: [1, 2, 3, 4, 5, 6, 7, 8].map((n) => `/projects/shure/p${n}.webp`),
     poster: true,
+    logo: '/projects/shure/logo-patient.webp',
   },
   {
     id: 'shure-doctor',
