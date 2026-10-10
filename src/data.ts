@@ -63,6 +63,8 @@ export type Project = {
   features: T[]
   stack: string[]
   shots: string[]
+  /** shots are store screenshots with their own device frame */
+  poster?: boolean
 }
 
 export const projects: Project[] = [
@@ -92,16 +94,19 @@ export const projects: Project[] = [
     year: '2026',
     hue: ['#f59e0b', '#10b981'],
     blurb: {
-      en: 'A guided Hajj & Umrah companion with step-by-step rituals, Qibla compass, supplications and video guidance.',
-      ar: 'رفيق الحج والعمرة: شرح المناسك خطوة بخطوة، بوصلة القبلة، الأدعية وفيديوهات إرشادية.',
+      en: 'A trusted platform for Umrah on behalf of others — request it for the deceased, ill or incapacitated, and follow every stage with photo & video proof and live location.',
+      ar: 'منصة موثوقة لأداء عمرة البدل — اطلب العمرة عن متوفى أو مريض أو عاجز، وتابع كل مرحلة بالصور والفيديو والموقع المباشر.',
     },
     features: [
-      { en: "Stage-by-stage Umrah guide (Ihram, Tawaf, Sa'i)", ar: 'دليل العمرة مرحلة بمرحلة (الإحرام، الطواف، السعي)' },
-      { en: 'Qibla compass & prayer helpers', ar: 'بوصلة القبلة ومساعدات الصلاة' },
-      { en: 'Localised content with a calm, focused UI', ar: 'محتوى متعدد اللغات بواجهة هادئة' },
+      { en: 'Create and track multiple Umrah requests with live status', ar: 'إنشاء ومتابعة أكثر من طلب عمرة بحالة لحظية' },
+      { en: 'Every ritual stage documented with photos and video', ar: 'توثيق كل مرحلة من المناسك بالصور والفيديو' },
+      { en: "Live location of the performer, active only during the task", ar: 'الموقع المباشر لمقدم العمرة، ويعمل فقط أثناء المهمة' },
+      { en: 'Verified performers; three roles — requester, performer, guest', ar: 'مقدمو عمرة معتمدون؛ ثلاث أدوار — طالب، مقدم، ضيف' },
+      { en: 'Qibla compass, prayer times and stories feed, fully Arabic/RTL', ar: 'بوصلة القبلة ومواقيت الصلاة وقصص، بواجهة عربية RTL' },
     ],
-    stack: ['Flutter', 'Firebase', 'l10n', 'Codemagic'],
-    shots: ['/projects/moneeb/kaaba.png'],
+    stack: ['Flutter', 'Firebase', 'Live Location', 'FCM', 'Codemagic'],
+    shots: ['/projects/moneeb/1.webp', '/projects/moneeb/2.webp', '/projects/moneeb/3.webp', '/projects/moneeb/4.webp', '/projects/moneeb/5.webp'],
+    poster: true,
   },
   {
     id: 'marsaai',

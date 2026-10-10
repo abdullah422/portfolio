@@ -69,6 +69,9 @@ function SectionHead({ title, sub, id }: { title: string; sub?: string; id: stri
 /* ---------- phone mockup ---------- */
 
 function Phone3D({ p, shot, lang }: { p: Project; shot?: string; lang: Lang }) {
+  if (p.poster && shot) {
+    return <img src={shot} alt={tr(p.name, lang)} loading="lazy" className="mx-auto w-[210px] rounded-[28px]" style={{ boxShadow: `0 30px 80px -20px ${p.hue[0]}55` }} />
+  }
   return (
     <div className="relative mx-auto w-[210px] aspect-[9/19] rounded-[34px] p-[7px] shadow-2xl" style={{ background: 'linear-gradient(145deg,#2a2d3a,#0b0c12)', boxShadow: `0 30px 80px -20px ${p.hue[0]}55` }}>
       <div className="absolute top-3 left-1/2 -translate-x-1/2 h-4 w-16 rounded-full bg-black z-10" />
