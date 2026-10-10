@@ -77,7 +77,7 @@ function Phone3D({ p, shot, lang }: { p: Project; shot?: string; lang: Lang }) {
       <div className="absolute top-3 left-1/2 -translate-x-1/2 h-4 w-16 rounded-full bg-black z-10" />
       <div className="h-full w-full rounded-[28px] overflow-hidden relative" style={{ background: `linear-gradient(160deg, ${p.hue[0]}, ${p.hue[1]})` }}>
         {shot ? (
-          <img src={shot} alt={tr(p.name, lang)} loading="lazy" className="h-full w-full object-cover" />
+          <img src={shot} alt={tr(p.name, lang)} loading="lazy" className="h-full w-full object-cover object-top" />
         ) : (
           <FakeScreen p={p} lang={lang} />
         )}

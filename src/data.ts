@@ -86,7 +86,7 @@ export const projects: Project[] = [
       { en: 'Receipt printing, ZATCA reports, Arabic/English localisation', ar: 'طباعة إيصالات، تقارير ZATCA، واجهة عربي/إنجليزي' },
     ],
     stack: ['Flutter', 'Dart', 'REST', 'SQLite', 'ZATCA', 'NearPay'],
-    shots: [],
+    shots: ['/projects/maly/1.webp', '/projects/maly/2.webp', '/projects/maly/4.webp', '/projects/maly/3.webp'],
   },
   {
     id: 'moneeb',
